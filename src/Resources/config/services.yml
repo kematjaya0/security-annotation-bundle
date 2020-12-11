@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Kematjaya\SecurityAnnotationBundle\Configuration\IsGrantedCreate: ~
+    Kematjaya\SecurityAnnotationBundle\Configuration\IsGrantedDelete: ~
+    Kematjaya\SecurityAnnotationBundle\Configuration\IsGrantedEdit: ~
+    Kematjaya\SecurityAnnotationBundle\Configuration\IsGrantedView: ~
