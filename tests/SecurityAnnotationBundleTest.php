@@ -17,7 +17,7 @@ class SecurityAnnotationBundleTest extends WebTestCase
         $this->assertInstanceOf(ContainerInterface::class, $container);
     }
     
-    public static function getKernelClass() 
+    public static function getKernelClass() :string
     {
         return AppKernelTest::class;
     }
