@@ -1,0 +1,31 @@
+post_view:
+    path: /post/{owner}/view
+    controller: Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\PostController::view
+
+post_edit:
+    path: /post/{owner}/edit
+    controller: Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\PostController::edit
+
+post_delete:
+    path: /post/{owner}/delete
+    controller: Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\PostController::delete
+
+post_create:
+    path: /post/create
+    controller: Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\PostController::create
+
+post_open:
+    path: /post/open
+    controller: Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\PostController::open
+
+post_trait:
+    path: /post/{owner}/trait
+    controller: Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\PostController::viaTrait
+
+post_wrong_subject:
+    path: /post/wrong-subject
+    controller: Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\PostController::wrongSubject
+
+admin_index:
+    path: /admin
+    controller: Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\AdminController::index
