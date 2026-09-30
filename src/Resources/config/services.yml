@@ -1,10 +1,5 @@
 services:
-    _defaults:
-        autowire: true
-        autoconfigure: true
-        public: false
-
-    Kematjaya\SecurityAnnotationBundle\Configuration\IsGrantedCreate: ~
-    Kematjaya\SecurityAnnotationBundle\Configuration\IsGrantedDelete: ~
-    Kematjaya\SecurityAnnotationBundle\Configuration\IsGrantedEdit: ~
-    Kematjaya\SecurityAnnotationBundle\Configuration\IsGrantedView: ~
+    Kematjaya\SecurityAnnotationBundle\EventListener\IsGrantedListener:
+        arguments:
+            - '@?security.authorization_checker'
+        tags: ['kernel.event_subscriber']

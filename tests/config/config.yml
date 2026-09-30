@@ -1,0 +1,33 @@
+framework:
+    test: true
+    secret: security-annotation-test
+    http_method_override: false
+    handle_all_throwables: true
+    php_errors:
+        log: true
+    router:
+        resource: '%kernel.project_dir%/config/routes.yml'
+        utf8: true
+
+security:
+    password_hashers:
+        Symfony\Component\Security\Core\User\InMemoryUser: plaintext
+    providers:
+        users:
+            memory:
+                users:
+                    admin: { password: admin, roles: [ROLE_ADMIN] }
+                    staff: { password: staff, roles: [ROLE_USER] }
+    firewalls:
+        main:
+            provider: users
+            http_basic: ~
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\PostVoter: ~
+    Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\PostController: ~
+    Kematjaya\SecurityAnnotationBundle\Tests\Fixtures\AdminController: ~

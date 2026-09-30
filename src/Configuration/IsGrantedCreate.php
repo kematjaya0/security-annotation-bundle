@@ -4,15 +4,18 @@ namespace Kematjaya\SecurityAnnotationBundle\Configuration;
 
 use Kematjaya\SecurityAnnotationBundle\Voter\BaseVoter;
 
+/**
+ * @author Nur Hidayatullah <kematjaya0@gmail.com>
+ */
 #[\Attribute(\Attribute::IS_REPEATABLE | \Attribute::TARGET_CLASS | \Attribute::TARGET_METHOD | \Attribute::TARGET_FUNCTION)]
-final class IsGrantedCreate
+final class IsGrantedCreate extends AbstractIsGranted
 {
     public function __construct(
-        public string $attribute = BaseVoter::KMJ_ACCESS_CREATE,
-        public array|string|null $subject = null,
-        public ?string $message = null,
-        public ?int $statusCode = null,
-        public ?int $exceptionCode = null,
+        array|string|null $subject = null,
+        ?string $message = null,
+        ?int $statusCode = null,
+        ?int $exceptionCode = null,
     ) {
+        parent::__construct(BaseVoter::KMJ_ACCESS_CREATE, $subject, $message, $statusCode, $exceptionCode);
     }
 }
