@@ -7,6 +7,4 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 /**
  * @author Nur Hidayatullah <kematjaya0@gmail.com>
  */
-class SecurityAnnotationBundle extends Bundle
-{
-}
+class SecurityAnnotationBundle extends Bundle {}

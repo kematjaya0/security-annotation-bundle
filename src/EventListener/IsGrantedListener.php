@@ -15,9 +15,7 @@ use Symfony\Component\Security\Core\Exception\AccessDeniedException;
  */
 class IsGrantedListener implements EventSubscriberInterface
 {
-    public function __construct(private readonly ?AuthorizationCheckerInterface $authorizationChecker = null)
-    {
-    }
+    public function __construct(private readonly ?AuthorizationCheckerInterface $authorizationChecker = null) {}
 
     public static function getSubscribedEvents(): array
     {

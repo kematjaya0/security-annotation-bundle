@@ -18,11 +18,10 @@ abstract class AbstractIsGranted
      * @param int|null             $exceptionCode kode exception saat akses ditolak
      */
     public function __construct(
-        public string $attribute,
-        public array|string|null $subject = null,
-        public ?string $message = null,
-        public ?int $statusCode = null,
-        public ?int $exceptionCode = null,
-    ) {
-    }
+        public readonly string $attribute,
+        public readonly array|string|null $subject = null,
+        public readonly ?string $message = null,
+        public readonly ?int $statusCode = null,
+        public readonly ?int $exceptionCode = null,
+    ) {}
 }

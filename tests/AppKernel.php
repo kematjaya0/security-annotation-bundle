@@ -24,7 +24,7 @@ class AppKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader): void
     {
-        $loader->load(__DIR__.'/config/config.yml');
+        $loader->load(__DIR__ . '/config/config.yml');
     }
 
     public function getProjectDir(): string
@@ -34,11 +34,11 @@ class AppKernel extends Kernel
 
     public function getCacheDir(): string
     {
-        return sys_get_temp_dir().'/kmj-security-annotation-bundle/cache';
+        return sys_get_temp_dir() . '/kmj-security-annotation-bundle/cache';
     }
 
     public function getLogDir(): string
     {
-        return sys_get_temp_dir().'/kmj-security-annotation-bundle/log';
+        return sys_get_temp_dir() . '/kmj-security-annotation-bundle/log';
     }
 }

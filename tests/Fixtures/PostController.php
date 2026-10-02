@@ -17,19 +17,19 @@ class PostController extends AbstractController
     #[IsGrantedView]
     public function view(string $owner): Response
     {
-        return new Response('view '.$owner);
+        return new Response('view ' . $owner);
     }
 
     #[IsGrantedEdit(subject: 'owner')]
     public function edit(string $owner): Response
     {
-        return new Response('edit '.$owner);
+        return new Response('edit ' . $owner);
     }
 
     #[IsGrantedDelete('owner', message: 'tidak boleh menghapus', statusCode: 404)]
     public function delete(string $owner): Response
     {
-        return new Response('delete '.$owner);
+        return new Response('delete ' . $owner);
     }
 
     #[IsGrantedCreate]
